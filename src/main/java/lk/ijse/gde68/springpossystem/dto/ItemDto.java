@@ -1,6 +1,5 @@
 package lk.ijse.gde68.springpossystem.dto;
 
-
 import lk.ijse.gde68.springpossystem.customObj.ItemResponse;
 import lombok.AllArgsConstructor;
 import lombok.Data;

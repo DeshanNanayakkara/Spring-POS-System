@@ -1,10 +1,12 @@
 package lk.ijse.gde68.springpossystem.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
@@ -15,14 +17,14 @@ import java.util.List;
 public class Order implements SuperEntity{
     @Id
     private String orderId;
-
-    @ManyToOne
-    @JoinColumn(name = "customerId", nullable = false)
-    private Customer customer;
     private String date;
     private double subTotal;
     private double total;
 
-    @OneToMany(mappedBy = "orders")
-    private List<OrderDetail> orderDetails;
+    @ManyToOne
+    @JoinColumn(name = "customerId", referencedColumnName = "customerId", nullable = false)
+    @JsonIgnore
+    private Customer customer;
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<OrderDetail> orderDetails = new ArrayList<>();
 }

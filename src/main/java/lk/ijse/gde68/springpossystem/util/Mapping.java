@@ -3,12 +3,10 @@ package lk.ijse.gde68.springpossystem.util;
 
 import lk.ijse.gde68.springpossystem.dto.CustomerDto;
 import lk.ijse.gde68.springpossystem.dto.ItemDto;
-import lk.ijse.gde68.springpossystem.dto.OrderDetailDto;
 import lk.ijse.gde68.springpossystem.dto.OrderDto;
 import lk.ijse.gde68.springpossystem.entity.Customer;
 import lk.ijse.gde68.springpossystem.entity.Item;
 import lk.ijse.gde68.springpossystem.entity.Order;
-import lk.ijse.gde68.springpossystem.entity.OrderDetail;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +47,4 @@ public class Mapping {
         return modelMapper.map(orderDto, Order.class);
     }
 
-    public OrderDetail convertToEntity(OrderDetailDto orderDetailDto){
-        return modelMapper.map(orderDetailDto, OrderDetail.class);
-    }
 }

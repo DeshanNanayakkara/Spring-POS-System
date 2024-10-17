@@ -1,7 +1,6 @@
 package lk.ijse.gde68.springpossystem.service;
 
 import jakarta.transaction.Transactional;
-
 import lk.ijse.gde68.springpossystem.customObj.ItemErrorResponse;
 import lk.ijse.gde68.springpossystem.customObj.ItemResponse;
 import lk.ijse.gde68.springpossystem.dao.ItemDao;
@@ -29,7 +28,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public void saveItem(ItemDto itemDto) {
-        logger.info("Attempting toi save item: {}", itemDto);
+        logger.info("Attempting to save item: {}", itemDto);
         if (itemDao.existsById(itemDto.getItemCode())) {
             logger.warn("Item Code already exists: {}", itemDto.getItemCode());
             throw new DataPersistFailedException("This Item Code already exists!");

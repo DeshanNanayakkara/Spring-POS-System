@@ -1,9 +1,6 @@
 package lk.ijse.gde68.springpossystem.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +18,6 @@ public class Customer implements SuperEntity {
     private String customerName;
     private String customerAddress;
     private double customerSalary;
-    @OneToMany(mappedBy = "orderId")
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Order> orders;
 }
