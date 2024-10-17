@@ -38,11 +38,11 @@ Make sure you have these installed:
 ### 🏃‍♂️ Running the Project:
 1. **Clone this repository**:
    ```bash
-   git clone https://github.com/your-github/pos-system-backend.git
-   cd pos-system-backend
+   git clone https://github.com/DeshanNanayakkara/Spring-POS-System.git
+   cd pos-system
 Configure MySQL: Update the application.properties file with your MySQL database settings.
 
 API Documentation:https://documenter.getpostman.com/view/35384247/2sAXxV6ViP#46de59bf-294d-4c2c-9e13-a2cfbcb04ebd
 <div align="center">
-© 2024 All Rights Reserved. Built by [Your Name] (https://github.com/DeshanNanayakkara)
+© 2024 All Rights Reserved. Built by [Deshan Nanayakkara] (https://github.com/DeshanNanayakkara)
 </div>
