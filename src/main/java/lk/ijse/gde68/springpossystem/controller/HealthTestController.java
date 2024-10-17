@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/v1/healthtest")
 public class HealthTestController {
     @GetMapping
-    public String healthTest(){
-        return "api is running";
-
+    public String health(){
+        return "Pos System API is running..";
     }
-
 }

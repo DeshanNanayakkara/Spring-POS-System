@@ -7,9 +7,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
+@ComponentScan("lk.ijse.gde68.springpossystem")
 @EnableWebMvc
 @EnableJpaRepositories("lk.ijse.gde68.springpossystem")
 @EnableTransactionManagement
-@ComponentScan("lk.ijse.gde68.springpossystem")
 public class WebAppConfig {
 }

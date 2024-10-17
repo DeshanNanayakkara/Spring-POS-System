@@ -12,23 +12,26 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan("lk.ijse.gde68.springpossystem")
-@EnableJpaRepositories("lk.ijse.gde68.springpossystem")
+@ComponentScan(basePackages = "lk.ijse.gde68.springpossystem")
+@EnableJpaRepositories(basePackages = "lk.ijse.gde68.springpossystem")
+@EnableWebMvc
 @EnableTransactionManagement
 public class WebAppRootConfig {
     @Bean
-    public ModelMapper modelMapper(){
+    public ModelMapper modelMapper() {
         return new ModelMapper();
     }
+
     @Bean
     public DataSource dataSource() {
         var dmds = new DriverManagerDataSource();
         dmds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dmds.setUrl("jdbc:mysql://localhost:3306/springpos?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false");
+        dmds.setUrl("jdbc:mysql://localhost:3306/Pos_System_using_spring?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false");
         dmds.setUsername("root");
         dmds.setPassword("Ijse@1234");
         return dmds;
