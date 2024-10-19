@@ -1,0 +1,22 @@
+body {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.WelcomeBox {
+    background-color: aquamarine;
+    width: 40vh;
+    height: 40vh;
+    text-align: center;
+    place-content: center;
+}
+.nav-btn{
+    background-color: rgb(16, 16, 67);
+    color: white;
+    width: 10vh;
+    height: 5vh;
+}
